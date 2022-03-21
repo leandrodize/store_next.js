@@ -1,9 +1,9 @@
 import React from 'react';
-import '@styles/Order.scss';
+import styles from '@styles/Orders.module.scss';
 
 const Order = () => {
 	return (
-		<div className="Order">
+		<div className={styles.OrderModule}>
 			<p>
 				<span>03.25.21</span>
 				<span>6 articles</span>

@@ -5,13 +5,13 @@ import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import AppContext from '@context/AppContext';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
-import '@styles/Header.scss';
+import styles from '@styles/Header.module.scss';
 
 const Header = () => {
 	const { state, toggleOrder, toggleMenu } = useContext(AppContext);
 
 	return (
-		<>
+		<div className={styles.HeaderModule} >
 			<nav>
 				<img src={menu} alt="menu" className="menu" />
 				<div className="navbar-left">
@@ -54,7 +54,7 @@ const Header = () => {
 				{state.menuIsOpen && <Menu />}
 			</nav>
 			{state.orderIsOpen && <MyOrder />}
-		</>
+		</div>
 	);
 }
 
