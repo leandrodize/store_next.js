@@ -2,12 +2,14 @@ import React from 'react';
 import ProductInfo from '@components/ProductInfo';
 import styles from '@styles/ProductDetail.module.scss';
 import close from '@icons/icon_close.png'
+import Image from 'next/image';
+
 
 const ProductDetail = () => {
 	return (
 		<aside className={styles.ProductDetailModule}>
-			<div className="ProductDetail-close">
-				<img src={close} alt="close" />
+			<div className={styles['ProductDetail-close']}>
+				<Image src={close} alt="close" />
 			</div>
 			<ProductInfo />
 		</aside>
